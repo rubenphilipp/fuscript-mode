@@ -115,6 +115,12 @@
     (kill-buffer fuscript-process-buffer)
     (setq fuscript-process-buffer nil)))
 
+(defun fuscript-restart-process ()
+  "Restart the `fuscript' process."
+  (interactive)
+  (fuscript-kill-process)
+  (fuscript-start-process))
+
 (defun fuscript-send-string (string)
   "Send STRING plus a newline to the `fuscript' process."
   (unless (string-equal (substring string -1) "\n")
