@@ -33,3 +33,9 @@ comp = composition
 SetActiveComp(comp)
 #+end_src
 
+If you want Emacs to automatically use the fuscript-mode for certain lua-files,
+consider adding the following to the first line of your file:
+
+#+begin_src lua
+-- -*- eval: (fuscript-mode) -*-
+#+end_src
