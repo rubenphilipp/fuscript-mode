@@ -7,7 +7,7 @@
 #+startup: overview
 
 A very simple minor-mode for Emacs enabling interfacing with Blackmagic Design's
-Fusion-CLI (~fuscript~), based on the [[https://github.com/rubenphilipp/fuscript-mode/blob/main/lua-mode][lua-mode]]. 
+Fusion-CLI (~fuscript~), based on the [[https://github.com/immerrr/lua-mode][lua-mode]]. 
 
 NB: As of now, this mode only supports the Lua language.  Support for Python
 (2/3) might be added later.
