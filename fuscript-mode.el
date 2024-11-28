@@ -1,4 +1,4 @@
-;;; fuscript-mode.el --- Testing functionality for a future fuscript minor-mode  -*- lexical-binding: t; -*-
+;;; fuscript-mode.el --- A minor-mode for Blackmagic Design's Fusion-CLI/FuScript.  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024  Ruben Philipp
 
