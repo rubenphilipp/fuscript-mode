@@ -1,0 +1,35 @@
+# -*- eval: (flyspell-mode); eval: (ispell-change-dictionary "en") -*-
+#+CATEGORY: tools
+#+title: fuscript-mode
+#+author: Ruben Philipp
+#+date: 2024-11-28
+#+LANGUAGE: en
+#+startup: overview
+
+A very simple minor-mode for Emacs enabling interfacing with Blackmagic Design's
+Fusion-CLI (~fuscript~), based on the [[lua-mode][https://immerrr.github.io/lua-mode]].
+
+NB: As of now, this mode only supports the Lua language.  Support for Python
+(2/3) might be added later.
+
+
+* Usage
+
+Activate the mode with ~M-x fuscript-mode~.  This will start a ~*fuscript*~
+subprocess (via comint).
+
+Now, evaluate lines (~fuscript-send-current-line~, or ~C-c C-l~), regions
+(~fuscript-send-region~, or ~C-c C-r~), and complete buffers
+(~fuscript-send-buffer~, or ~C-c C-b~) in the ~fuscript~ subprocess.
+
+Make sure to bind FuScript to the current fusion instance, e.g. by evaluating
+the following lines of code (cf. Fusion 8 Scripting Guide, p. 25).
+
+#+begin_src lua
+fusion = Fusion()
+fu = fusion
+composition = fu.CurrentComp
+comp = composition
+SetActiveComp(comp)
+#+end_src
+
